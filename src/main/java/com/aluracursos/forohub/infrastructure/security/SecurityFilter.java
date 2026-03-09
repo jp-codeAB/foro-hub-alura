@@ -25,19 +25,30 @@ public class SecurityFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         var tokenJWT = recuperarToken(request);
-        if (tokenJWT!=null){
-            var subject = tokenService.getSubject(tokenJWT);
-            var user = repository.findByEmail(subject);
-            var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
 
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+        if (tokenJWT != null) {
+            try {
+                var subject = tokenService.getSubject(tokenJWT);
+                var user = repository.findByEmail(subject);
+
+                if (user != null) {
+                    var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+                    SecurityContextHolder.getContext().setAuthentication(authentication);
+                }
+            } catch (RuntimeException e) {
+                // Si el token es inválido, simplemente no autenticamos.
+                // La configuración de seguridad decidirá si la ruta requiere o no auth.
+                System.out.println("Token inválido detectado: " + e.getMessage());
+            }
         }
+
         filterChain.doFilter(request, response);
     }
 
+    // Asegúrate de que el replace incluya el espacio "Bearer "
     private String recuperarToken(HttpServletRequest request) {
         var authorizationHeader = request.getHeader("Authorization");
-        if (authorizationHeader!=null){
+        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             return authorizationHeader.replace("Bearer ", "");
         }
         return null;
