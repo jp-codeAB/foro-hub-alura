@@ -83,17 +83,17 @@ Genera el token JWT necesario para las demás operaciones.
 ![gettop](./img/gettop.png)
 
 ### Ver Tópicos por ID
-**GET** `/topico/:id`
+**GET** `/topico/{id}`
 
 ![getidtop](./img/getidtop.png)
 
 ### Eliminar Tópicos por ID
-**DELETE** `/topico/:id`
+**DELETE** `/topico/{id}`
 
 ![deletetop](./img/deletetop.png)
 
 ### Actualizar la pregunta del Tópico por ID
-**PATCH** `/topico/:id`
+**PATCH** `/topico/{id}`
 
 ![patchtop](./img/patchtop.png)
 
@@ -109,16 +109,16 @@ Genera el token JWT necesario para las demás operaciones.
 ![getres](./img/getres.png)
 
 ### Ver Respuesta por ID
-**GET** `/respuesta/:id`
+**GET** `/respuesta/{id}`
 
 ![getidres](./img/getidres.png)
 
 ### Eliminar Respuesta por ID
-**DELETE** `/respuesta/:id`
+**DELETE** `/respuesta/{id}`
 
 ![deleteres](./img/deleteres.png)
 
 ### Actualizar parcialmente la Respuesta por ID
-**PATCH** `/respuesta/:id`
+**PATCH** `/respuesta/{id}`
 
 ![patchres](./img/patchres.png)
