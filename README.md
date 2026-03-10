@@ -7,7 +7,25 @@
 
 El proyecto implementa seguridad basada en **JWT (JSON Web Tokens)**, persistencia en **PostgreSQL** y una arquitectura modular que separa claramente las responsabilidades de negocio, presentación y acceso a datos.
 
+## 📋 Metodología de Trabajo
+
+Se utilizó metodología Kanban para la gestión del proyecto.
+
+🗂 Herramienta utilizada:
+
+Trello: https://trello.com/b/9DeAlIsq/foro-hub-challenge-back-end
+
+Columnas empleadas:
+- Backlog
+- En Desarrollo
+- Pausado
+- Concluido
+  
 ---
+
+## 🧠 Modelo de Datos - Diagrama ER
+
+![forohub](./img/diagrama.png)
 
 ## 🛠 Stack Tecnológico
 | Tecnología | Versión / Detalle |
@@ -51,4 +69,5 @@ La seguridad se maneja de forma **Stateless**. Solo los endpoints de `/auth/logi
   "email": "juan.perez@ejemplo.com",
   "contrasena": "password123"
 }
+
 
