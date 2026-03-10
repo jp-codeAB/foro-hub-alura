@@ -1,0 +1,8 @@
+package com.aluracursos.forohub.repository;
+
+import com.aluracursos.forohub.domain.respuesta.Respuesta;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RespuestaRepository extends JpaRepository<Respuesta, Long> {
+}
