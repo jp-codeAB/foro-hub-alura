@@ -1,4 +1,5 @@
 # 📚 ForoHub - Challenge Alura Latam
+
 ![forohub](./img/forohub.png)
 
 ## 📋 Descripción del Proyecto
@@ -35,7 +36,10 @@ El sistema sigue un diseño desacoplado en capas, garantizando escalabilidad y f
 | **Infrastructure** | Configuraciones de seguridad, filtros JWT y manejo global de excepciones. |
 
 ---
+## 🏗 Estructura de Carpetas 
 
+![forohub](./img/img.png)
+---
 ## 🔒 Seguridad y Autenticación
 La seguridad se maneja de forma **Stateless**. Solo los endpoints de `/auth/login` y `/auth/register` están abiertos al público. El resto de la API requiere un token Bearer válido en el encabezado `Authorization`.
 
