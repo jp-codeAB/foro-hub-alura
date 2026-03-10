@@ -97,3 +97,28 @@ Genera el token JWT necesario para las demás operaciones.
 
 ![patchtop](./img/patchtop.png)
 
+
+### Crear nueva Respuesta
+**POST** `/respuesta`
+
+![postres](./img/postres.png)
+
+### Ver todas las Respuestas
+**GET** `/respuesta`
+
+![getres](./img/getres.png)
+
+### Ver Respuesta por ID
+**GET** `/respuesta/:id`
+
+![getidres](./img/getidres.png)
+
+### Eliminar Respuesta por ID
+**DELETE** `/respuesta/:id`
+
+![deleteres](./img/deleteres.png)
+
+### Actualizar parcialmente la Respuesta por ID
+**PATCH** `/respuesta/:id`
+
+![patchres](./img/patchres.png)
