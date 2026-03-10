@@ -8,6 +8,7 @@ import com.aluracursos.forohub.domain.user.UserEntity;
 import com.aluracursos.forohub.repository.UserRepository;
 import com.aluracursos.forohub.service.TokenService;
 import jakarta.validation.Valid;
+import jakarta.validation.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

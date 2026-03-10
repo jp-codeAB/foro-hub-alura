@@ -24,6 +24,8 @@ public class UserEntity implements UserDetails {
     private Long id;
     private String nombre;
     private String contrasena;
+
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Override

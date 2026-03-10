@@ -25,7 +25,7 @@ Columnas empleadas:
 
 ## 🧠 Modelo de Datos - Diagrama ER
 
-![forohub](./img/diagrama.png)
+![diagrama](./img/diagrama.png)
 
 ## 🛠 Stack Tecnológico
 | Tecnología | Versión / Detalle |
@@ -56,18 +56,38 @@ El sistema sigue un diseño desacoplado en capas, garantizando escalabilidad y f
 ---
 ## 🏗 Estructura de Carpetas 
 
-![forohub](./img/img.png)
+![carpetas](./img/img.png)
 ---
 ## 🔒 Seguridad y Autenticación
 La seguridad se maneja de forma **Stateless**. Solo los endpoints de `/auth/login` y `/auth/register` están abiertos al público. El resto de la API requiere un token Bearer válido en el encabezado `Authorization`.
 
 ### Ejemplo de Registro de Usuario (JSON)
 **POST** `/auth/register`
-```json
-{
-  "nombre": "Juan Perez",
-  "email": "juan.perez@ejemplo.com",
-  "contrasena": "password123"
-}
 
+![register](./img/register.png)
+
+### Login de Usuario
+Genera el token JWT necesario para las demás operaciones.
+
+**POST** `/auth/login`
+![login](./img/login.png)
+
+### Crear nuevo Tópico
+**POST** `/topico`
+![posttop](./img/posttop.png)
+
+**GET** `/topico`
+![gettop](./img/gettop.png)
+
+**GET** `/topico/:id`
+![getidtop](./img/getidtop.png)
+
+**DELETE** `/topico/:id`
+![deletetop](./img/deletetop.png)
+
+**PUT** `/topico/:id`
+![puttop](./img/puttop.png)
+
+**PATCH** `/topico/:id`
+![patchtop](./img/patchtop.png)
 
