@@ -1,5 +1,6 @@
 package com.aluracursos.forohub.infrastructure.exceptions;
 
+import com.aluracursos.forohub.domain.DTO.response.DatosErrorMensaje;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +17,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ErrorExceptionHander {
 
     @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity getionarError404() {
-        return ResponseEntity.notFound().build();
+    public ResponseEntity gestionarError404(EntityNotFoundException ex) {
+        String mensaje = (ex.getMessage() != null && !ex.getMessage().isBlank())
+                ? ex.getMessage()
+                : "El recurso solicitado no existe";
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(new DatosErrorMensaje(mensaje));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
