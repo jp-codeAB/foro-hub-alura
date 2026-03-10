@@ -74,20 +74,26 @@ Genera el token JWT necesario para las demás operaciones.
 
 ### Crear nuevo Tópico
 **POST** `/topico`
+
 ![posttop](./img/posttop.png)
 
+### Ver todos los Tópicos
 **GET** `/topico`
+
 ![gettop](./img/gettop.png)
 
+### Ver Tópicos por ID
 **GET** `/topico/:id`
+
 ![getidtop](./img/getidtop.png)
 
+### Eliminar Tópicos por ID
 **DELETE** `/topico/:id`
+
 ![deletetop](./img/deletetop.png)
 
-**PUT** `/topico/:id`
-![puttop](./img/puttop.png)
-
+### Actualizar la pregunta del Tópico por ID
 **PATCH** `/topico/:id`
+
 ![patchtop](./img/patchtop.png)
 
