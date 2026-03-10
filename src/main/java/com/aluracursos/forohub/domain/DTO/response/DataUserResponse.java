@@ -1,4 +1,4 @@
-package com.aluracursos.forohub.domain.DTO;
+package com.aluracursos.forohub.domain.DTO.response;
 
 import com.aluracursos.forohub.domain.user.UserEntity;
 

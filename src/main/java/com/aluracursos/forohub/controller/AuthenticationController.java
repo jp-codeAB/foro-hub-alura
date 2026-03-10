@@ -1,7 +1,7 @@
 package com.aluracursos.forohub.controller;
 
-import com.aluracursos.forohub.domain.DTO.DataUserRegistration;
-import com.aluracursos.forohub.domain.DTO.DataUserResponse;
+import com.aluracursos.forohub.domain.DTO.request.DataUserRegistration;
+import com.aluracursos.forohub.domain.DTO.response.DataUserResponse;
 import com.aluracursos.forohub.domain.user.DataAuthentication;
 import com.aluracursos.forohub.domain.user.DataTokenJWT;
 import com.aluracursos.forohub.domain.user.UserEntity;
